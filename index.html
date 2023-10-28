@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Fishing</title>
+    <link rel="icon" href="./images/bubble.png">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <div id="start">
+        <!-- <p>Choose Your Avatar</p>
+        <img src="./images/fisher1.png" width="100px">
+        <img src="./images/fisher2.png" width="100px"> -->
+        <button id="start-btn" onclick="initGame()">Start</button>
+        <button id="multi-btn" onclick="initMultiGame()">Multiplayer</button>
+    </div>
+
+    <div id="end" style="display: none;">
+        <p>High Score: <span id="highScore">0</span></p>
+        <button id="restart-btn" onclick="restart()">Restart</button>
+    </div>
+    
+    <div id="game" style="display: none;">
+        <div class="score-board"></div>
+        <div id="timer"></div>
+        <div class="boat-container">
+
+            <img src="./images/boat.png" class="boat" id="boat1">
+            <img src="./images/fisher2.png" class="fisher" id="fisher1">
+            <div class="rod-stand" id="stand1"></div>
+            <div class="rod" id="rod1"><img src="./images/hook.png" class="hook" id="hook1"></div>
+
+            <img src="./images/boat.png" class="boat flip-horizontally" id="boat2" style="display: none;">
+            <img src="./images/fisher2.png" class="fisher" id="fisher2" style="display: none;">
+            <div class="rod-stand" id="stand2" style="display: none;"></div>
+            <div class="rod" id="rod2" style="display: none;"><img src="./images/hook.png" class="hook flip-horizontally" id="hook2"></div>
+
+        </div>
+        <div class="ocean">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+        <canvas></canvas>
+        <div class="fishCont"></div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
